@@ -1,0 +1,38 @@
+[
+  {
+    "mesto": "Tvrdošín",
+    "primator": "Ing. Ivan Šaško",
+    "plat": 6339.84,
+    "koeficient": 2.6,
+    "navysenie_percent": 60,
+    "zdroj": "tvrdosin.docx",
+    "datum_schvalenia": "2022-11-29"
+  },
+  {
+    "mesto": "Námestovo",
+    "primator": "neuvedené",
+    "plat": 5943.6,
+    "koeficient": 2.6,
+    "navysenie_percent": 50,
+    "zdroj": "odpoved z mesta Námestovo",
+    "datum_schvalenia": "2022-11-28"
+  },
+  {
+    "mesto": "Trstená",
+    "primator": "Mgr. Magdaléna Zmarzláková",
+    "plat": 5469,
+    "koeficient": 2.6,
+    "navysenie_percent": 38,
+    "zdroj": "odpoved z mesta Trstená",
+    "datum_schvalenia": "2024-XX-XX"
+  },
+  {
+    "mesto": "Dolný Kubín",
+    "primator": "neuvedené",
+    "plat": 4283,
+    "koeficient": null,
+    "navysenie_percent": null,
+    "zdroj": "odpoved z mesta Dolný Kubín",
+    "datum_schvalenia": "2025-01-01"
+  }
+]
