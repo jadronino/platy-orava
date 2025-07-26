@@ -7,16 +7,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --green: #2d4a2c;
-      --lightgreen: #e6f2ea;
-      --accent: #14532d;
-      --background: #f5f5f5;
+      --green: #1f4032;
+      --light: #f4fdf6;
+      --background: #f9f9f9;
+      --highlight: #38b000;
+      --danger: #ef4444;
+    }
+    * {
+      box-sizing: border-box;
     }
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
       background-color: var(--background);
-      color: #1b1b1b;
+      color: #1e1e1e;
+      margin: 0;
+      padding: 0;
     }
     header {
       background-color: var(--green);
@@ -24,69 +29,68 @@
       padding: 1.5rem 2rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.75rem;
-      display: flex;
-      align-items: center;
       gap: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     header img {
-      height: 50px;
+      height: 48px;
+      border-radius: 4px;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
     }
     main {
-      max-width: 960px;
-      margin: 2rem auto;
-      background: white;
+      max-width: 1000px;
+      margin: 3rem auto;
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.05);
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     }
     .info {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-    }
-    th, td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
+      font-size: 1rem;
     }
     th {
       background-color: var(--green);
       color: white;
-      font-weight: 600;
+      padding: 1rem;
+      text-align: left;
+      font-size: 1rem;
+    }
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid #e2e8f0;
     }
     tr:nth-child(even) {
-      background-color: var(--lightgreen);
+      background-color: var(--light);
     }
     .lowest {
-      background-color: #c6f6d5 !important;
+      background-color: #caffd0 !important;
       font-weight: bold;
     }
     .highest {
-      background-color: #fed7d7 !important;
+      background-color: #ffe4e4 !important;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Orava_CoA_SK.svg" alt="Erb Oravy"/>
-      Platy primátorov na Orave
-    </h1>
+    <img src="erb-oravy.png" alt="Erb Oravy">
+    <h1>Platy primátorov na Orave</h1>
   </header>
   <main>
     <p class="info">
-      Tento prehľad ukazuje <strong>mesačné platy primátorov</strong> miest na Orave 
-      a výkonnostný ukazovateľ: <strong>mesačný náklad na 1 obyvateľa (€/obyv.)</strong>. 
-      Čím <u>nižšie</u> číslo, tým <strong>efektívnejšie</strong> rozdelenie verejných prostriedkov.
+      Tento prehľad zobrazuje <strong>mesačné platy primátorov</strong> miest na Orave spolu s výkonnostným ukazovateľom 
+      <strong>€/obyv.</strong> (mesačný náklad na 1 obyvateľa). Nižšia hodnota znamená efektívnejšie rozdelenie verejných prostriedkov.
     </p>
     <table id="platova-tabulka">
       <thead>
