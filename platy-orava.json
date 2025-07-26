@@ -4,27 +4,27 @@
     "primator": "Ing. Ivan Šaško",
     "obyvatelia": 9200,
     "plat": 6339.84,
-    "euro_na_obyvatela": 0.69
+    "obyvatelia_na_euro": 1.45
   },
   {
     "mesto": "Námestovo",
     "primator": "Ing. Ján Kadera",
     "obyvatelia": 7723,
     "plat": 5943.6,
-    "euro_na_obyvatela": 0.77
+    "obyvatelia_na_euro": 1.3
   },
   {
     "mesto": "Trstená",
     "primator": "Mgr. Magdaléna Zmarzláková",
     "obyvatelia": 7307,
     "plat": 5469,
-    "euro_na_obyvatela": 0.75
+    "obyvatelia_na_euro": 1.34
   },
   {
     "mesto": "Dolný Kubín",
     "primator": "Ján Prílepok",
     "obyvatelia": 18550,
     "plat": 4283,
-    "euro_na_obyvatela": 0.23
+    "obyvatelia_na_euro": 4.33
   }
 ]
