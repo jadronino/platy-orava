@@ -3,92 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Platy primátorov na Orave</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Platy primátorov Oravy</title>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #1b3b2f;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #2d4a2c;
-      color: white;
-      padding: 1.5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    header img {
-      height: 50px;
-      margin-right: 1rem;
-    }
-    header h1 {
-      font-size: 1.8rem;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1.5rem;
-      background: #fdfdfd;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    th, td {
-      padding: 0.9rem 1rem;
-      text-align: left;
-    }
-    th {
-      background: #2d4a2c;
-      color: white;
-      font-weight: 600;
-    }
-    tr:nth-child(even) {
-      background-color: #f3f7f3;
-    }
-    .info {
-      font-size: 1rem;
-      color: #444;
-    }
-    .highlight {
-      font-weight: bold;
-      color: #14532d;
-    }
+    body { font-family: sans-serif; margin: 2rem; background: #ffffff; color: #2d4a2c; }
+    h1 { color: #2d4a2c; display: flex; align-items: center; gap: 1rem; }
+    img.erb { width: 50px; }
+    table { border-collapse: collapse; width: 100%; background: #f9f9f9; margin-top: 1rem; }
+    th, td { padding: 0.75rem; border: 1px solid #ccc; text-align: left; }
+    th { background-color: #2d4a2c; color: white; }
   </style>
 </head>
 <body>
-  <header>
-    <h1><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Orava_CoA_SK.svg" alt="Erb Oravy"/> Platy primátorov na Orave</h1>
-  </header>
-  <main>
-    <p class="info">
-      Tento prehľad ukazuje mesačné platy primátorov miest na Orave a výkonnostný ukazovateľ 
-      <span class="highlight">obyvateľov na 1 € platu</span>. Čím vyššie číslo, tým nižší relatívny náklad.
-    </p>
-    <table id="platova-tabulka">
-      <thead>
-        <tr>
-          <th>Mesto</th>
-          <th>Primátor</th>
-          <th>Plat (€)</th>
-          <th>Počet obyvateľov</th>
-          <th>Obyvateľov / €</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </main>
+  <h1><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Orava_CoA_SK.svg/1200px-Orava_CoA_SK.svg.png" class="erb" alt="Erb Oravy"/> Platy primátorov na Orave</h1>
+  <p>Tento prehľad ukazuje mesačné platy primátorov miest na Orave a výkonnostný ukazovateľ <strong>obyvateľov na 1 € platu</strong>.</p>
+  <table id="platova-tabulka">
+    <thead>
+      <tr>
+        <th>Mesto</th>
+        <th>Primátor</th>
+        <th>Plat (€)</th>
+        <th>Počet obyvateľov</th>
+        <th>Obyvateľov / €</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
   <script>
     fetch('platy-orava.json')
       .then(response => response.json())
