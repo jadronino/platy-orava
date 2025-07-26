@@ -5,25 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Platy primátorov Oravy</title>
   <style>
-    body { font-family: sans-serif; margin: 2rem; background: #f4f4f4; color: #333; }
-    h1 { color: #005c8c; }
-    table { border-collapse: collapse; width: 100%; background: white; }
+    body { font-family: sans-serif; margin: 2rem; background: #ffffff; color: #2d4a2c; }
+    h1 { color: #2d4a2c; display: flex; align-items: center; gap: 1rem; }
+    img.erb { width: 50px; }
+    table { border-collapse: collapse; width: 100%; background: #f9f9f9; margin-top: 1rem; }
     th, td { padding: 0.75rem; border: 1px solid #ccc; text-align: left; }
-    th { background-color: #005c8c; color: white; }
+    th { background-color: #2d4a2c; color: white; }
   </style>
 </head>
 <body>
-  <h1>Platy primátorov na Orave</h1>
-  <p>Údaje sú získané zo zákonných odpovedí miest podľa infozákona (211/2000 Z.z.).</p>
+  <h1><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Orava_CoA_SK.svg/1200px-Orava_CoA_SK.svg.png" class="erb" alt="Erb Oravy"/> Platy primátorov na Orave</h1>
+  <p>Tento prehľad ukazuje mesačné platy primátorov miest na Orave a výkonnostný ukazovateľ <strong>obyvateľov na 1 € platu</strong>.</p>
   <table id="platova-tabulka">
     <thead>
       <tr>
         <th>Mesto</th>
         <th>Primátor</th>
         <th>Plat (€)</th>
-        <th>Navýšenie (%)</th>
-        <th>Zdroj</th>
-        <th>Dátum schválenia</th>
+        <th>Počet obyvateľov</th>
+        <th>Obyvateľov / €</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -40,9 +40,8 @@
             <td>${zaznam.mesto}</td>
             <td>${zaznam.primator}</td>
             <td>${zaznam.plat.toFixed(2)} €</td>
-            <td>${zaznam.navysenie_percent ?? "–"}%</td>
-            <td>${zaznam.zdroj}</td>
-            <td>${zaznam.datum_schvalenia}</td>
+            <td>${zaznam.obyvatelia}</td>
+            <td>${zaznam.obyvatelia_na_euro}</td>
           `;
           tbody.appendChild(row);
         });

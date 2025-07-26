@@ -1,9 +1,13 @@
 # Platy primátorov Oravy
 
-Tento projekt zhromažďuje údaje o platoch primátorov a starostov miest na Orave na základe zákona č. 211/2000 Z.z. o slobodnom prístupe k informáciám.
+Tento projekt zverejňuje platy primátorov miest na Orave spolu s výkonnostným ukazovateľom: počet obyvateľov / výška platu.
 
-## Mesto → Primátor → Plat (v hrubom)
+## Ukazovateľ efektivity
 
-Dáta sú zhromažďované manuálne zo sprístupnených odpovedí miest.
+Vyšší počet obyvateľov na 1 € platu znamená lepší pomer "cena-výkon".
 
-Projekt slúži na podporu transparentnosti vo verejnej správe.
+## Mestá zahrnuté:
+- Dolný Kubín
+- Tvrdošín
+- Námestovo
+- Trstená

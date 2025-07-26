@@ -2,37 +2,29 @@
   {
     "mesto": "Tvrdošín",
     "primator": "Ing. Ivan Šaško",
+    "obyvatelia": 9200,
     "plat": 6339.84,
-    "koeficient": 2.6,
-    "navysenie_percent": 60,
-    "zdroj": "tvrdosin.docx",
-    "datum_schvalenia": "2022-11-29"
+    "obyvatelia_na_euro": 1.45
   },
   {
     "mesto": "Námestovo",
-    "primator": "neuvedené",
+    "primator": "Ing. Ján Kadera",
+    "obyvatelia": 7723,
     "plat": 5943.6,
-    "koeficient": 2.6,
-    "navysenie_percent": 50,
-    "zdroj": "odpoved z mesta Námestovo",
-    "datum_schvalenia": "2022-11-28"
+    "obyvatelia_na_euro": 1.3
   },
   {
     "mesto": "Trstená",
     "primator": "Mgr. Magdaléna Zmarzláková",
+    "obyvatelia": 7307,
     "plat": 5469,
-    "koeficient": 2.6,
-    "navysenie_percent": 38,
-    "zdroj": "odpoved z mesta Trstená",
-    "datum_schvalenia": "2024-XX-XX"
+    "obyvatelia_na_euro": 1.34
   },
   {
     "mesto": "Dolný Kubín",
-    "primator": "neuvedené",
+    "primator": "Ján Prílepok",
+    "obyvatelia": 18550,
     "plat": 4283,
-    "koeficient": null,
-    "navysenie_percent": null,
-    "zdroj": "odpoved z mesta Dolný Kubín",
-    "datum_schvalenia": "2025-01-01"
+    "obyvatelia_na_euro": 4.33
   }
 ]
