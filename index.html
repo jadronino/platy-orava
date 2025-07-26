@@ -1,136 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="sk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Platy primátorov na Orave</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --green: #1f4032;
-      --light: #f4fdf6;
-      --background: #f9f9f9;
-      --highlight: #38b000;
-      --danger: #ef4444;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--background);
-      color: #1e1e1e;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: var(--green);
-      color: white;
-      padding: 1.5rem 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    header img {
-      height: 48px;
-      border-radius: 4px;
-    }
-    header h1 {
-      font-size: 1.8rem;
-      margin: 0;
-    }
-    main {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    }
-    .info {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 1rem;
-    }
-    th {
-      background-color: var(--green);
-      color: white;
-      padding: 1rem;
-      text-align: left;
-      font-size: 1rem;
-    }
-    td {
-      padding: 1rem;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    tr:nth-child(even) {
-      background-color: var(--light);
-    }
-    .lowest {
-      background-color: #caffd0 !important;
-      font-weight: bold;
-    }
-    .highest {
-      background-color: #ffe4e4 !important;
-      font-weight: bold;
-    }
-  </style>
+  <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
   <header>
-    <img src="erb-oravy.png" alt="Erb Oravy">
+    <img src="logo-orava.png" class="logo animate-logo" alt="Erb Oravy" />
     <h1>Platy primátorov na Orave</h1>
+    <img src="logo-oravator.png" class="logo animate-logo" alt="Oravator.sk" />
   </header>
+
   <main>
-    <p class="info">
-      Tento prehľad zobrazuje <strong>mesačné platy primátorov</strong> miest na Orave spolu s výkonnostným ukazovateľom 
-      <strong>€/obyv.</strong> (mesačný náklad na 1 obyvateľa). Nižšia hodnota znamená efektívnejšie rozdelenie verejných prostriedkov.
-    </p>
-    <table id="platova-tabulka">
-      <thead>
-        <tr>
-          <th>Mesto</th>
-          <th>Primátor</th>
-          <th>Plat (€)</th>
-          <th>Počet obyvateľov</th>
-          <th>€/obyv.</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <section class="table-card">
+      <h2>Prehľad platov primátorov</h2>
+      <table>
+        <thead>
+          <tr><th>Mesto</th><th>Primátor</th><th>Plat (€)</th><th>Počet obyvateľov</th><th>€/obyv.</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Trstená</td><td>Mgr. Magdaléna Zmarzláková</td><td>5469.00 €</td><td>7307</td><td>0.7485 €</td></tr>
+          <tr class="highlight"><td>Námestovo</td><td>Ing. Ján Kadera</td><td>5943.60 €</td><td>7723</td><td>0.7696 €</td></tr>
+          <tr><td>Tvrdošín</td><td>Ing. Ivan Šaško</td><td>6339.84 €</td><td>9200</td><td>0.6891 €</td></tr>
+          <tr class="best"><td>Dolný Kubín</td><td>Ján Prílepok</td><td>4283.00 €</td><td>18550</td><td>0.2309 €</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="dancing kroj"></div>
+    <div class="walking-bear"></div>
   </main>
-  <script>
-    fetch('platy-orava.json')
-      .then(res => res.json())
-      .then(data => {
-        const tbody = document.querySelector('#platova-tabulka tbody');
-        let minVal = Infinity, maxVal = -Infinity;
-        data.forEach(d => {
-          if (d.euro_na_obyvatela < minVal) minVal = d.euro_na_obyvatela;
-          if (d.euro_na_obyvatela > maxVal) maxVal = d.euro_na_obyvatela;
-        });
-        data.forEach(z => {
-          const row = document.createElement('tr');
-          let cls = "";
-          if (z.euro_na_obyvatela === minVal) cls = "lowest";
-          if (z.euro_na_obyvatela === maxVal) cls = "highest";
-          row.className = cls;
-          row.innerHTML = `
-            <td>${z.mesto}</td>
-            <td>${z.primator}</td>
-            <td>${z.plat.toFixed(2)} €</td>
-            <td>${z.obyvatelia}</td>
-            <td>${z.euro_na_obyvatela.toFixed(4)} €</td>
-          `;
-          tbody.appendChild(row);
-        });
-      });
-  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>

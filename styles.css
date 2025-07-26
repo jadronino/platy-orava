@@ -1,0 +1,66 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+}
+header {
+  background: #1f3d26;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.logo {
+  height: 50px;
+  transition: transform 0.5s;
+}
+.animate-logo:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+.table-card {
+  background: white;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+.highlight { background: #ffe5e5; }
+.best { background: #d8f9d8; }
+
+.walking-bear {
+  position: fixed;
+  bottom: 0;
+  left: -200px;
+  width: 100px;
+  height: 100px;
+  background: url('bear.gif') no-repeat center/contain;
+  animation: bearwalk 20s linear infinite;
+}
+@keyframes bearwalk {
+  0% { left: -200px; }
+  100% { left: 120%; }
+}
+.dancing.kroj {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  width: 100px;
+  height: 100px;
+  background: url('kroj.gif') no-repeat center/contain;
+  animation: krojDance 4s ease-in-out infinite;
+}
+@keyframes krojDance {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
